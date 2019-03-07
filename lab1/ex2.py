@@ -1,4 +1,6 @@
 def factorial(num):
+    if num < 0:
+        return "error, factorial only for positive numbers"
     if num == 1:
         return num
     else:
