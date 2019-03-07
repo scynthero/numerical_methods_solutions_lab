@@ -1,3 +1,6 @@
+import cs50
+
+
 def factorial(num):
     if num < 0:
         return "error, factorial only for positive numbers"
@@ -7,4 +10,4 @@ def factorial(num):
         return num * factorial(num - 1)
 
 
-print(factorial(int(input("Provide number to factorialize: "))))
+print(factorial(cs50.get_int("Provide number to factorialize: ")))
