@@ -1,5 +1,5 @@
 import cs50
-
+print("if you don;t supply correct type (float), the progam will ask again")
 x = cs50.get_float("x: ")
 y = cs50.get_float("y: ")
 if y == 0:
