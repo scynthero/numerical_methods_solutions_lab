@@ -1,6 +1,6 @@
 import cs50
 import math
-
+print("if you don;t supply correct type (float), the progam will ask again")
 x = cs50.get_float("x: ")
 y = cs50.get_float("y: ")
 print("Perimeter of first circle is {:.4f}, and it's field is {:.4f}. "
