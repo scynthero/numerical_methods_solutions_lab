@@ -1,1 +1,1 @@
-for x in range(56, 101): print(2 * x ** 2 + 2 * x + 2)
+for x in range(-50, 1): print(x)

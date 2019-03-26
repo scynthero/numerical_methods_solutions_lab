@@ -5,7 +5,7 @@ def minimal(array=[-12, 15, 23, -8, -12, 56]):
 '''
 
 
-def minimal(array=[-12, 15, 23, -8, -12, 56]):
+def minimal(array=[-12, 15, 23, -8, -12, 56, -14.5]):
     mini = min(array)
     collect_mini = []
     for x in range(len(array)):
