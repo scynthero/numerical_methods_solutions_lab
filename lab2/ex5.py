@@ -14,5 +14,5 @@ def plotting(num=0):
     ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=plt.cm.coolwarm, linewidth=0.4)
     plt.show()
 
-
+print("if you don't supply correct type (float), the program will ask again")
 plotting(cs50.get_float("number: "))
