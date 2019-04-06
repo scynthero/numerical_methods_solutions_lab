@@ -25,27 +25,15 @@ def countField(figure, *args):
     return globals()[figure]().field(*args)
 
 
-def compare(*args):
-    cmpr = []
-    for i in range(len(args)):
-        if len(args[i]) == 2:
-            cmpr.append([args[i][0], countField(args[i][0], args[i][1])])
-        else:
-            cmpr.append([args[i][0], countField(args[i][0], args[i][1], args[i][2])])
-
-    if cmpr[0][1] > cmpr[1][1]:
-        return "The {} has larger field = {:g}".format(cmpr[0][0], cmpr[0][1])
-    elif cmpr[0][1] == cmpr[1][1]:
-        return "The fields are equal = {:g}".format(cmpr[0][1])
+def compare(figure1, figure2):
+    figure1_field = countField(*figure1)
+    figure2_field = countField(*figure2)
+    if figure1_field > figure2_field:
+        return "The {} has larger field = {:g}".format(figure1[0], figure1_field)
+    elif figure1_field == figure2_field:
+        return "The fields are equal = {:g}".format(figure1_field)
     else:
-        return "The {} has larger field = {:g}".format(cmpr[1][0], cmpr[1][1])
-
-    '''
-    if countField(args[0][0], args[0][1:]) > countField(args[1][0],args[1][1:]):
-        return "The {} has larger field".format(args[0][0])
-    else:
-        return "The {} has larger field".format(args[1][0])
-    '''
+        return "The {} has larger field = {:g}".format(figure2[0], figure2_field)
 
 
-print(compare(["Circle", 4], ["Rhombus", 2, 4]))
+print(compare(["Circle", 6], ["Rhombus", 2, 4]))
